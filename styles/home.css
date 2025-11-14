@@ -1,0 +1,487 @@
+/* Variáveis de Cores (Azul escuro como primária, Verde WhatsApp, Roxo/Rosa para Insta) */
+:root {
+    --color-primary-dark: #0A192F; /* Azul Marinho Muito Escuro (BASE) */
+    --color-primary: #1F6FFF; /* Azul Vibrante (Contraste 1: Títulos, Ícones, Destaques) */
+    --color-secondary: #FFC107; /* Amarelo Vibrante (Destaque de texto) */
+    --color-whatsapp-green: #28A745; /* VERDE Padrão WhatsApp (CTA Principal) */
+    --color-instagram: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); /* Simulação do gradiente Insta */
+    --color-dark-text: #333333; 
+    --color-light-text: #E0E6EF; 
+    --color-medium-gray: #6C757D; 
+    --color-white: #FFFFFF;
+    --color-light-bg: #F7F7F7; /* Fundo claro para a seção de objetivos */
+    --font-stack: 'Montserrat', sans-serif;
+}
+
+/* Base e Utilitários */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-stack);
+    color: var(--color-light-text); 
+    line-height: 1.6;
+    background-color: var(--color-primary-dark); 
+    overflow-x: hidden; 
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.section-padding {
+    padding: 100px 0; 
+}
+
+/* Reversão para Fundo Claro em Objetivos */
+.bg-light, .objectives {
+    background-color: var(--color-light-bg); 
+    color: var(--color-dark-text); /* Texto escuro no fundo claro */
+}
+.bg-dark {
+    background-color: var(--color-primary-dark); 
+}
+
+/* Títulos e Subtítulos */
+.section-title {
+    font-size: 2.8em; 
+    font-weight: 900;
+    text-align: center;
+    color: var(--color-primary-dark); /* Escuro para fundo claro, branco para fundo escuro */
+    margin-bottom: 10px;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+}
+.objectives .section-title { 
+    color: var(--color-primary-dark); 
+}
+.bg-dark .section-title, .hero-v5 .section-title { 
+    color: var(--color-white); 
+}
+
+.section-subtitle {
+    font-size: 1.1em;
+    font-weight: 300;
+    text-align: center;
+    color: var(--color-medium-gray); 
+    margin-bottom: 60px;
+    letter-spacing: 0.5px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.objectives .section-subtitle { 
+    color: var(--color-medium-gray); 
+}
+
+/* HEADER e NAVEGAÇÃO */
+.header {
+    background-color: var(--color-primary-dark);
+    padding: 18px 0; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+}
+.header .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+.logo {
+    font-size: 1.9em; 
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.main-nav {
+    display: flex;
+    gap: 35px; 
+    padding-left: 40px;
+    margin-right: auto; /* Permite que os CTAs fiquem na extrema direita */
+}
+.main-nav a {
+    color: var(--color-light-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em; 
+    transition: color 0.3s, transform 0.2s;
+    position: relative; 
+}
+.header-cta-area {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+/* BOTÕES - Ajuste para o mesmo estilo/tamanho no header */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 22px; /* Padronizado para o header */
+    border-radius: 6px; 
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    flex-shrink: 0; 
+    white-space: nowrap; 
+    font-size: 0.95em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 1. BOTÃO INSTAGRAM (Cores do Instagram) */
+.btn-instagram-header {
+    background: var(--color-instagram);
+    color: var(--color-white) !important;
+}
+.btn-instagram-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 39, 67, 0.6); 
+}
+
+/* 2. BOTÃO WHATSAPP (Cor Padrão Verde) */
+.btn-fale-agora, .btn-fale-agora-green {
+    background-color: var(--color-whatsapp-green);
+    color: var(--color-white) !important;
+}
+.btn-fale-agora:hover, .btn-fale-agora-green:hover {
+    background-color: #1e7e34;
+    transform: translateY(-2px);
+}
+/* Estilo maior para CTA principal */
+.btn-whatsapp-main {
+    padding: 18px 40px;
+    border-radius: 50px; 
+    font-size: 1.2em;
+    margin-top: 30px;
+    background-color: var(--color-whatsapp-green);
+    color: var(--color-white) !important;
+    box-shadow: 0 6px 25px rgba(40, 167, 69, 0.6); 
+}
+
+
+/* HERO V5: Layout de 2 colunas */
+.hero-v5 {
+    position: relative;
+    min-height: 95vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: var(--color-primary-dark); 
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 3;
+    /* Alteração para 2 colunas: 1fr (Texto Principal) | 1fr (About) */
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 80px; 
+    max-width: 1200px;
+    padding: 100px 20px;
+    align-items: center;
+}
+
+/* Coluna 1: Info Principal - Alinhamento Centralizado (imagem juliano cavalcante) */
+.hero-main-area {
+    text-align: center; /* Centralizado para o estilo juliano cavalcante */
+    color: var(--color-white);
+    padding-right: 0; /* Removido padding */
+}
+.tagline {
+    font-size: 1.1em;
+    color: var(--color-secondary);
+    letter-spacing: 2px;
+    margin-bottom: 8px; 
+}
+.headline-name {
+    font-size: 4.8em; 
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+.headline-role {
+    font-size: 1.8em; 
+    font-weight: 400;
+    color: var(--color-primary);
+    margin-bottom: 40px; 
+}
+.personal-photo-wrapper-circle {
+    margin: 40px auto 0 auto; /* Centralizado */
+    width: 250px; 
+    height: 250px;
+    padding: 8px; 
+    border: 5px solid var(--color-primary); 
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--color-white);
+    box-shadow: 0 0 0 12px rgba(31, 111, 255, 0.2);
+    display: flex; /* Adicionado para centralizar a imagem dentro */
+    justify-content: center; /* Adicionado */
+    align-items: center; /* Adicionado */
+}
+/* AJUSTE PARA A IMAGEM DENTRO DO CÍRCULO */
+.personal-photo-hero-circle {
+    width: 100%; /* Garante que a imagem preenche o wrapper */
+    height: 100%; /* Garante que a imagem preenche o wrapper */
+    object-fit: cover; /* Corta a imagem para cobrir o container sem distorcer */
+    border-radius: 50%; /* Mantém a imagem circular */
+}
+
+
+/* Coluna 2: SOBRE MIM */
+.hero-about-area {
+    color: var(--color-light-text);
+    background-color: rgba(255, 255, 255, 0.05); 
+    padding: 40px; 
+    border-radius: 10px; 
+    border: 1px solid var(--color-primary); 
+    border-left: 5px solid var(--color-primary); 
+    height: fit-content;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6); 
+}
+.about-title {
+    font-size: 1.7em;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+.about-text {
+    font-size: 1.05em; 
+    margin-bottom: 18px;
+    color: var(--color-light-text);
+    font-weight: 300;
+}
+.mini-photo-area {
+    display: none; /* Oculta a miniatura */
+}
+
+
+/* SEÇÃO "TREINE COM A ORIENTAÇÃO CORRETA" (Mantido) */
+.value-grid {
+    background-color: var(--color-primary-dark);
+}
+.feature-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 30px; 
+    margin-top: 60px;
+}
+.feature-card {
+    padding: 35px 25px; 
+    background-color: rgba(255, 255, 255, 0.03); 
+    border-radius: 12px; 
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+    color: var(--color-light-text);
+}
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-primary);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+.feature-card h3 {
+    color: var(--color-white); 
+    margin-bottom: 12px;
+    font-size: 1.5em; 
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+.feature-card p {
+    color: var(--color-medium-gray);
+    font-size: 1em;
+    font-weight: 300;
+}
+.icon-wrapper { 
+    width: 80px; 
+    height: 80px;
+    margin: 0 auto 25px; 
+    background-color: var(--color-primary); 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2em; 
+    color: var(--color-white);
+    box-shadow: 0 0 0 5px rgba(31, 111, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+
+/* Reversão - Seção Objetivos (Fundo Claro com Grid de Imagens) */
+.objectives {
+    background-color: var(--color-light-bg); 
+    color: var(--color-dark-text);
+}
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+    margin-top: 60px;
+}
+.objective-card {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.objective-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.objective-image {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    opacity: 1; 
+    margin-bottom: 20px;
+}
+.objective-info {
+    position: static; /* Não é mais absoluto */
+    background: none;
+    padding: 0 15px; 
+    color: var(--color-dark-text);
+}
+.objective-info h3 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.4em; 
+    color: var(--color-primary-dark);
+}
+.objective-cta {
+    color: var(--color-primary); 
+    font-size: 1em; 
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+.objective-cta:hover {
+    color: var(--color-secondary);
+}
+
+
+/* Reversão - Seção Preços/Planos (Fundo Escuro Simples) */
+.bg-dark-promo {
+    background-color: var(--color-primary-dark); /* Fundo escuro simples */
+    background-image: none; /* Remove a imagem de fundo */
+    background-attachment: scroll;
+    position: static; 
+    padding: 120px 0; 
+}
+.bg-dark-promo::before { 
+    content: none; /* Remove o overlay */
+}
+.pricing-grid {
+    position: static; 
+    z-index: auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; 
+    gap: 80px;
+    align-items: center;
+    padding: 0; 
+}
+.pricing-text {
+    color: var(--color-white);
+    padding: 20px 0;
+}
+.pricing-text h2 {
+    font-size: 3em; 
+    font-weight: 900;
+    margin-bottom: 25px;
+    color: var(--color-secondary); 
+    letter-spacing: 1px;
+}
+.lead-text {
+    font-size: 1.15em; 
+    font-weight: 300;
+    color: var(--color-light-text);
+    margin-bottom: 40px;
+}
+.pricing-card {
+    background-color: var(--color-white);
+    padding: 40px; 
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    color: var(--color-dark-text); 
+    border: 1px solid var(--color-primary); 
+}
+.package-title {
+    color: var(--color-primary-dark); 
+}
+.benefit-list li i {
+    color: var(--color-whatsapp-green);
+}
+
+/* Remoção da CTA Final (transformação) */
+.cta-final {
+    display: none;
+}
+
+/* FOOTER - Ajuste no link de política de privacidade */
+.footer {
+    background-color: #05101b; 
+    padding: 30px 0; 
+    font-size: 0.9em;
+    color: var(--color-medium-gray);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer a {
+    color: var(--color-primary); /* Link azul */
+    text-decoration: underline; /* Sublinhado para política de privacidade */
+}
+.footer a:hover {
+    color: var(--color-secondary);
+}
+
+
+/* --- Responsividade (Ajustes para mobile) --- */
+@media (max-width: 992px) {
+    .main-nav {
+        display: none; 
+    }
+    .hero-content {
+        grid-template-columns: 1fr; 
+        gap: 50px;
+        padding: 80px 20px;
+    }
+    .hero-main-area {
+        order: 1;
+        text-align: center;
+        padding-right: 0;
+    }
+    .hero-about-area {
+        order: 2;
+        background-color: rgba(255, 255, 255, 0.05); /* Mantém o fundo escuro do ABOUT */
+        color: var(--color-light-text);
+        border: 1px solid var(--color-primary); 
+    }
+    .objectives .objective-card {
+        padding-bottom: 20px;
+    }
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 30px 20px;
+    }
+    .pricing-text h2 {
+        font-size: 2.5em;
+    }
+}
