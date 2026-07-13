@@ -3,211 +3,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Trainer - Foco no Seu Resultado</title>
-    <link rel="stylesheet" href="styles/home.css"> 
+    <title>Neto Personal Trainer — Transformação Corporal com Método</title>
+    <meta name="description" content="Consultoria online de treino com Francisco 'Neto' de Assis. Emagrecimento, hipertrofia e saúde com acompanhamento real, plataforma exclusiva e suporte direto no WhatsApp.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <header id="header" class="header">
-        <div class="container">
+        <div class="container header-inner">
             <a href="#hero" class="logo">
-                <i class="fas fa-running"></i> NETO PERSONAL TRAINER
+                <span class="logo-mark">N</span> NETO<span class="logo-thin">PERSONAL</span>
             </a>
-            
-            <nav class="main-nav">
-                <a href="#hero">Início</a>
-                <a href="#value-grid">Sobre</a>
-                <a href="#objectives">Objetivos</a> 
-                <a href="#pricing">Planos</a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="#hero" class="nav-link active">Início</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#metodo" class="nav-link">Método</a>
+                <a href="#objetivos" class="nav-link">Objetivos</a>
+                <a href="#resultados" class="nav-link">Resultados</a>
+                <a href="#planos" class="nav-link">Planos</a>
+                <a href="#faq" class="nav-link">Dúvidas</a>
             </nav>
 
             <div class="header-cta-area">
-                <a href="https://instagram.com/neto_dmn" target="_blank" class="btn btn-instagram-header">
-                    <i class="fab fa-instagram"></i> INSTA
+                <a href="https://instagram.com/neto_dmn" target="_blank" class="btn btn-instagram-header" aria-label="Acessar Instagram">
+                    <i class="fab fa-instagram"></i><span class="btn-txt">INSTA</span>
                 </a>
-                <a href="#" class="btn btn-fale-agora cta-whatsapp"><i class="fab fa-whatsapp"></i> FALE AGORA</a>
+                <a href="https://wa.me/5500000000000" target="_blank" class="btn btn-fale-agora cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i><span class="btn-txt">FALE AGORA</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
 
     <main>
-        <section id="hero" class="hero hero-v5">
-            <div class="hero-content container">
-                
-                <div class="hero-main-area">
-                    <p class="tagline">Entre em Forma Comigo</p>
-                    <h1 class="headline-name">
-                        FRANCISCO DE ASSIS (neto_dmn)
-                    </h1>
-                    <p class="headline-role">PERSONAL TRAINER</p>
+        <!-- ============ HERO ============ -->
+        <section id="hero" class="hero">
+            <div class="hero-bg-panel" aria-hidden="true"></div>
+            <div class="container hero-content">
+                <div class="hero-text reveal">
+                    <p class="eyebrow"><span class="eyebrow-dot"></span>CONSULTORIA ONLINE DE TREINO</p>
+                    <h1 class="hero-title">SEU CORPO<br>NÃO MUDA<br><span class="text-ember">SOZINHO.</span></h1>
+                    <p class="hero-sub">Treino, técnica e acompanhamento real — pra você emagrecer, ganhar força e treinar sem dor, onde estiver.</p>
 
-                    <div class="personal-photo-wrapper-circle">
-                        <img src="assets/personalatt.PNG" alt="Foto do Personal Trainer [Seu Nome]" class="personal-photo-hero-circle">
+                    <div class="hero-actions">
+                        <a href="https://wa.me/5500000000000" target="_blank" id="main-cta" class="btn btn-whatsapp-main cta-whatsapp">
+                            <i class="fab fa-whatsapp"></i> QUERO COMEÇAR AGORA
+                        </a>
+                        <a href="#metodo" class="btn btn-ghost">Como funciona <i class="fas fa-arrow-down"></i></a>
                     </div>
 
-                    <a href="#" id="main-cta" class="btn btn-whatsapp-main btn-pulse cta-whatsapp">
-                        <i class="fab fa-whatsapp"></i> QUERO TRANSFORMAR MEU CORPO
-                    </a>
+                    <div class="hero-stats" id="heroStats">
+                        <div class="stat">
+                            <span class="stat-num" data-count="2">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">anos de<br>experiência</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-count="120">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">alunos em<br>transformação</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-count="100">0</span><span class="stat-plus">%</span>
+                            <span class="stat-label">treino<br>personalizado</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="hero-about-area">
-                    <h2 class="about-title">SOBRE MIM: METODOLOGIA COMPROVADA</h2>
-                    <p class="about-text">
-                        Com mais de 2 anos de experiência e formação em Educação Física, sou especialista em transformação corporal e treinamento personalizado. Meu método é focado em resultados reais, combinando treinos de alta performance, correção postural e acompanhamento.
-                    </p>
-                    <p class="about-text">
-                        Se você busca emagrecimento, hipertrofia ou condicionamento físico, meu objetivo é te levar além do que você imagina ser possível. Minha missão é garantir que você não apenas atinja seu pico de performance, mas que mantenha o resultado com saúde e consistência. Vamos transformar seu corpo e sua rotina juntos!
-                    </p>
-                    <a href="#value-grid" class="btn btn-read-more">SAIBA MAIS DETALHES <i class="fas fa-arrow-right"></i></a>
+                <div class="hero-photo-col reveal">
+                    <div class="hero-photo-frame">
+                        <img src="assets/personalatt.PNG" alt="Francisco de Assis, personal trainer, em ambiente de treino" class="hero-photo">
+                        <span class="hero-photo-tag">FRANCISCO DE ASSIS<br><em>Personal Trainer & Consultor Esportivo</em></span>
+                    </div>
                 </div>
-                
+            </div>
+
+            <div class="hero-marquee" aria-hidden="true">
+                <div class="marquee-track">
+                    <span>EMAGRECIMENTO</span><span>·</span><span>HIPERTROFIA</span><span>·</span><span>CONDICIONAMENTO</span><span>·</span><span>SAÚDE</span><span>·</span>
+                    <span>EMAGRECIMENTO</span><span>·</span><span>HIPERTROFIA</span><span>·</span><span>CONDICIONAMENTO</span><span>·</span><span>SAÚDE</span><span>·</span>
+                </div>
             </div>
         </section>
-        
-        <section id="value-grid" class="value-grid section-padding">
+
+        <!-- ============ SOBRE ============ -->
+        <section id="sobre" class="about section-padding">
+            <div class="container about-grid">
+                <div class="about-photo reveal">
+                    <img src="assets/personal.PNG" alt="Francisco de Assis em uma academia" loading="lazy">
+                </div>
+                <div class="about-copy reveal">
+                    <p class="eyebrow"><span class="eyebrow-dot"></span>METODOLOGIA COMPROVADA</p>
+                    <h2 class="section-title align-left">SOBRE MIM</h2>
+                    <p class="about-text">Com mais de 2 anos de experiência prática e formação em Educação Física, sou especialista em transformação corporal e treinamento personalizado. Meu método combina treinos de alta performance, correção postural e acompanhamento contínuo — nada de planilha genérica.</p>
+                    <p class="about-text">Se você busca emagrecimento, hipertrofia ou condicionamento físico, meu objetivo é te levar além do que você imagina ser possível. Treino com saúde, constância e resultado real — esse é o combinado.</p>
+                    <ul class="about-checklist">
+                        <li><i class="fas fa-check"></i> Avaliação individual antes de montar qualquer treino</li>
+                        <li><i class="fas fa-check"></i> Ajustes de carga e execução toda semana</li>
+                        <li><i class="fas fa-check"></i> Suporte direto comigo, sem intermediário</li>
+                    </ul>
+                    <a href="https://wa.me/5500000000000" target="_blank" class="btn btn-fale-agora-green cta-whatsapp">Fale comigo agora <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ VALUE / FEATURES ============ -->
+        <section id="valores" class="value-grid section-padding">
             <div class="container">
+                <p class="eyebrow center"><span class="eyebrow-dot"></span>POR QUE TREINAR COMIGO</p>
                 <h2 class="section-title">TREINE COM A ORIENTAÇÃO CORRETA</h2>
-                <p class="section-subtitle">O caminho mais rápido para resultados permanentes. Treine de forma inteligente, segura e com suporte científico.</p>
+                <p class="section-subtitle">O caminho mais rápido para resultados permanentes. Treino inteligente, seguro e com suporte de verdade.</p>
 
                 <div class="feature-grid">
-                    <div class="feature-card">
+                    <div class="feature-card reveal">
                         <div class="icon-wrapper"><i class="fas fa-user-check"></i></div>
-                        <h3>Avaliação Biomecânica Detalhada</h3>
-                        <p>Análise completa da sua postura, mobilidade e desequilíbrios musculares para criar um treino que previne lesões e otimiza a execução de cada exercício.</p>
+                        <h3>Avaliação Biomecânica</h3>
+                        <p>Análise completa da sua postura e mobilidade para criar um treino que previne lesões e otimiza seus resultados.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal">
                         <div class="icon-wrapper"><i class="fas fa-dumbbell"></i></div>
                         <h3>Periodização Personalizada</h3>
-                        <p>Criamos um programa de treino específico para o seu biotipo, nível de experiência e objetivos, com ajustes de intensidade, volume e progressão constante.</p>
+                        <p>Programa específico para o seu biotipo, nível de experiência e rotina, com progressão constante de carga.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal">
                         <div class="icon-wrapper"><i class="fas fa-mobile-alt"></i></div>
                         <h3>Consultoria Online Premium</h3>
-                        <p>Tenha acesso a vídeos de execução ilustrados, detalhamento de cargas e acompanhamento 24/7 via plataforma exclusiva para tirar todas as dúvidas e receber suporte.</p>
+                        <p>Vídeos de execução ilustrados, controle de cargas e acompanhamento direto em plataforma exclusiva.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal">
                         <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
-                        <h3>Monitoramento de Performance</h3>
-                        <p>Utilizamos métricas e testes de performance regulares para medir seus avanços, garantir que estamos no caminho certo e celebrar cada marco da sua evolução.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon-wrapper"><i class="fas fa-handshake"></i></div>
-                        <h3>Compromisso com o Resultado</h3>
-                        <p>Nossa parceria é construída na confiança e dedicação. Meu acompanhamento vai além da academia, oferecendo motivação e estratégias para você não desistir.</p>
+                        <h3>Monitoramento de Evolução</h3>
+                        <p>Métricas e feedbacks regulares para medir seus avanços — você chega mais rápido ao objetivo.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="objectives" class="objectives section-padding bg-light">
+        <!-- ============ COMO FUNCIONA (PROCESSO) ============ -->
+        <section id="metodo" class="process section-padding bg-light">
             <div class="container">
+                <p class="eyebrow center dark"><span class="eyebrow-dot"></span>DO PRIMEIRO CONTATO AO RESULTADO</p>
+                <h2 class="section-title dark">COMO FUNCIONA A CONSULTORIA</h2>
+                <p class="section-subtitle">Quatro etapas simples, sem enrolação.</p>
+
+                <div class="process-grid">
+                    <div class="process-card reveal">
+                        <span class="process-num">01</span>
+                        <h3>Diagnóstico</h3>
+                        <p>Você responde uma avaliação completa (rotina, histórico, fotos) pra eu entender seu ponto de partida real.</p>
+                    </div>
+                    <div class="process-card reveal">
+                        <span class="process-num">02</span>
+                        <h3>Plano sob medida</h3>
+                        <p>Monto seu treino de acordo com objetivo, tempo disponível e onde você treina — academia ou casa.</p>
+                    </div>
+                    <div class="process-card reveal">
+                        <span class="process-num">03</span>
+                        <h3>Execução guiada</h3>
+                        <p>Vídeos de cada exercício, cargas e repetições claras na plataforma. Sem dúvida na hora de treinar.</p>
+                    </div>
+                    <div class="process-card reveal">
+                        <span class="process-num">04</span>
+                        <h3>Ajuste contínuo</h3>
+                        <p>Acompanho sua evolução e reajusto o treino toda semana — o plano nunca fica parado no tempo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ OBJETIVOS ============ -->
+        <section id="objetivos" class="objectives section-padding">
+            <div class="container">
+                <p class="eyebrow center"><span class="eyebrow-dot"></span>ESCOLHA SEU FOCO</p>
                 <h2 class="section-title">EMAGRECIMENTO, HIPERTROFIA E SAÚDE</h2>
-                <p class="section-subtitle">Supere suas expectativas com um programa de treinamento personalizado, baseado na ciência e focado em seus objetivos.</p>
+                <p class="section-subtitle">Escolha o seu foco principal e receba um direcionamento cirúrgico.</p>
 
                 <div class="objectives-grid">
-                    <div class="objective-card">
-                        <img src="assets/back.jpg" alt="Foco em Emagrecimento e Definição" class="objective-image">
+                    <div class="objective-card reveal">
+                        <div class="objective-image-wrap">
+                            <img src="assets/back.jpg" alt="Foco em Emagrecimento e Definição" class="objective-image" loading="lazy">
+                        </div>
                         <div class="objective-info">
                             <h3>Emagrecimento & Definição</h3>
-                            <a href="#" class="objective-cta">Conheça o Programa <i class="fas fa-arrow-right"></i></a>
+                            <p>Treino metabólico + orientação de rotina para perder gordura sem perder força.</p>
+                            <a href="https://wa.me/5500000000000?text=Quero%20saber%20mais%20sobre%20o%20programa%20de%20Emagrecimento" target="_blank" class="objective-cta cta-whatsapp">Conheça o programa <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="objective-card">
-                        <img src="assets/hipertrofa.jpg" alt="Foco em Hipertrofia e Força" class="objective-image">
-                           <div class="objective-info">
+                    <div class="objective-card reveal">
+                        <div class="objective-image-wrap">
+                            <img src="assets/hipertrofa.jpg" alt="Foco em Hipertrofia e Força" class="objective-image" loading="lazy">
+                        </div>
+                        <div class="objective-info">
                             <h3>Hipertrofia & Força</h3>
-                            <a href="#" class="objective-cta">Conheça o Programa <i class="fas fa-arrow-right"></i></a>
+                            <p>Periodização de cargas com foco em ganho de massa magra e força real.</p>
+                            <a href="https://wa.me/5500000000000?text=Quero%20saber%20mais%20sobre%20o%20programa%20de%20Hipertrofia" target="_blank" class="objective-cta cta-whatsapp">Conheça o programa <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="objective-card">
-                        <img src="assets/saude.jpg" alt="Foco em Saúde e Qualidade de Vida" class="objective-image">
-                           <div class="objective-info">
+                    <div class="objective-card reveal">
+                        <div class="objective-image-wrap">
+                            <img src="assets/saude.jpg" alt="Foco em Saúde e Qualidade de Vida" class="objective-image" loading="lazy">
+                        </div>
+                        <div class="objective-info">
                             <h3>Saúde & Bem-Estar</h3>
-                            <a href="#" class="objective-cta">Conheça o Programa <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="objective-card">
-                        <img src="assets/condicionamento.jpg" alt="Foco em Condicionamento Físico" class="objective-image">
-                           <div class="objective-info">
-                            <h3>Condicionamento Físico</h3>
-                            <a href="#" class="objective-cta">Conheça o Programa <i class="fas fa-arrow-right"></i></a>
+                            <p>Condicionamento, postura e constância — treino pensado pra sua qualidade de vida.</p>
+                            <a href="https://wa.me/5500000000000?text=Quero%20saber%20mais%20sobre%20o%20programa%20de%20Saúde" target="_blank" class="objective-cta cta-whatsapp">Conheça o programa <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="pricing" class="pricing section-padding bg-dark-promo">
-            <div class="container pricing-grid">
-                
-                <div class="pricing-text">
-                    <h2 class="text-white">SAIA DO SOFÁ!</h2>
-                    <p class="lead-text">
-                        As sessões de treinamento são previamente combinadas de acordo com horários e dias exclusivos para cada aluno. O treinamento é totalmente adequado aos seus objetivos, observando correções de postura, nível de intensidade, intervalos, volume e outras variáveis, garantindo máxima eficiência em cada encontro.
-                    </p>
-                    
+        <!-- ============ RESULTADOS / TESTEMUNHOS ============ -->
+        <section id="resultados" class="testimonials section-padding bg-dark-promo">
+            <div class="container">
+                <p class="eyebrow center"><span class="eyebrow-dot"></span>PROVA REAL</p>
+                <h2 class="section-title">RESULTADOS DE ALUNOS REAIS</h2>
+                <p class="section-subtitle">Quem treina com o método do Neto chega antes ao objetivo.</p>
+
+                <div class="testimonial-slider reveal">
+                    <button class="ts-arrow ts-prev" aria-label="Depoimento anterior"><i class="fas fa-chevron-left"></i></button>
+
+                    <div class="ts-viewport">
+                        <div class="ts-track" id="tsTrack">
+                            <figure class="ts-card">
+                                <blockquote>"Perdi 8kg em dois meses sem passar fome e corrigi minhas dores nas costas com as dicas de postura do Neto."</blockquote>
+                                <figcaption>— Carlos M., 32 anos <span>· Emagrecimento</span></figcaption>
+                            </figure>
+                            <figure class="ts-card">
+                                <blockquote>"A consultoria online superou minhas expectativas. Os vídeos explicativos ajudam muito a treinar certinho sozinha."</blockquote>
+                                <figcaption>— Mariana S., 27 anos <span>· Condicionamento</span></figcaption>
+                            </figure>
+                            <figure class="ts-card">
+                                <blockquote>"Em 4 meses de periodização ganhei mais força do que em 2 anos treinando por conta própria."</blockquote>
+                                <figcaption>— Rafael T., 24 anos <span>· Hipertrofia</span></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <button class="ts-arrow ts-next" aria-label="Próximo depoimento"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="ts-dots" id="tsDots"></div>
+            </div>
+        </section>
+
+        <!-- ============ PLANOS ============ -->
+        <section id="planos" class="pricing section-padding bg-light">
+            <div class="container">
+                <p class="eyebrow center dark"><span class="eyebrow-dot"></span>INVISTA NO SEU RESULTADO</p>
+                <h2 class="section-title dark">SAIA DO SOFÁ</h2>
+                <p class="section-subtitle">Metodologia exclusiva de acordo com a sua rotina. Treine onde quiser, com máxima eficiência.</p>
+
+                <div class="billing-toggle" role="group" aria-label="Ciclo de cobrança">
+                    <button class="toggle-btn active" data-cycle="mensal">Mensal</button>
+                    <button class="toggle-btn" data-cycle="trimestral">Trimestral <span class="toggle-badge">-15%</span></button>
                 </div>
 
-                <div class="plan-cards-container">                     
-                    <div class="pricing-card pricing-card-essential">
+                <div class="plan-cards-container">
+                    <div class="pricing-card reveal">
                         <h3 class="package-title">Consultoria Essencial</h3>
-                        <p class="package-subtitle">Acompanhamento completo para resultados online.</p>
+                        <p class="package-subtitle">Acompanhamento digital completo.</p>
                         <div class="price-area">
-                            <span class="price-value">R$ 249,00</span>
+                            <span class="price-value" data-mensal="R$ 249" data-trimestral="R$ 212">R$ 249</span>
                             <span class="price-detail">/mês</span>
                         </div>
-                        <p class="price-info">O plano ideal para quem busca uma orientação profissional detalhada e todo o suporte necessário para treinar com segurança e consistência.</p>
-
                         <ul class="benefit-list">
-                            <li><i class="fas fa-check-circle"></i> Avaliação Inicial Detalhada</li>
-                            <li><i class="fas fa-check-circle"></i> Treino Personalizado (Exclusivo para seus objetivos)</li>
-                            <li><i class="fas fa-check-circle"></i> Vídeos Demonstrativos (Para correta execução)</li>
-                            <li><i class="fas fa-check-circle"></i> Ajuste Semanal (Progresso garantido)</li>
-                            <li><i class="fas fa-check-circle"></i> Acompanhamento WhatsApp (Tira-dúvidas)</li>
+                            <li><i class="fas fa-check-circle"></i> Avaliação inicial</li>
+                            <li><i class="fas fa-check-circle"></i> Treino personalizado</li>
+                            <li><i class="fas fa-check-circle"></i> Vídeos demonstrativos</li>
+                            <li><i class="fas fa-check-circle"></i> Suporte via WhatsApp</li>
                         </ul>
-
-                        <a href="#" class="btn btn-secondary-outline cta-whatsapp">ASSINAR PLANO <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://wa.me/5500000000000?text=Quero%20assinar%20o%20Plano%20Essencial" target="_blank" class="btn btn-secondary-outline cta-whatsapp">Assinar plano <i class="fas fa-arrow-right"></i></a>
                     </div>
 
-                    <div class="pricing-card pricing-card-premium">
+                    <div class="pricing-card pricing-card-premium reveal">
+                        <span class="premium-tag">MAIS ESCOLHIDO</span>
                         <h3 class="package-title">Consultoria Premium</h3>
-                        <p class="package-subtitle">(Tudo do Essencial + Suporte em Vídeo)</p>
+                        <p class="package-subtitle">Essencial + suporte próximo em vídeo</p>
                         <div class="price-area">
-                            <span class="price-value">R$ 399,00</span>
+                            <span class="price-value" data-mensal="R$ 399" data-trimestral="R$ 339">R$ 399</span>
                             <span class="price-detail">/mês</span>
                         </div>
-                        <p class="price-info">Acompanhamento de alto nível com reuniões semanais para correção técnica, orientação em tempo real e evolução acelerada.</p>
-
                         <ul class="benefit-list">
-                            <li><i class="fas fa-check-circle"></i> Avaliação Inicial Detalhada</li>
-                            <li><i class="fas fa-check-circle"></i> Treino Personalizado</li>
-                            <li><i class="fas fa-check-circle"></i> Vídeos Demonstrativos</li>
-                            <li><i class="fas fa-check-circle"></i> Ajuste Semanal</li>
-                            <li><i class="fas fa-check-circle"></i> Acompanhamento WhatsApp</li>
-                            <li class="highlight-premium"><i class="fas fa-video"></i> 1 Reunião em vídeo por semana (Para evolução e ajustes)</li>
-                            <li class="highlight-premium"><i class="fas fa-cogs"></i> Orientações Técnicas em Tempo Real </li>
+                            <li><i class="fas fa-check-circle"></i> Tudo do Essencial</li>
+                            <li class="highlight-premium"><i class="fas fa-video"></i> 1 reunião por vídeo semanal</li>
+                            <li class="highlight-premium"><i class="fas fa-cogs"></i> Análise de execução em tempo real</li>
                         </ul>
-
-                        <a href="#" class="btn btn-secondary-outline cta-whatsapp">ASSINAR PLANO PREMIUM <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://wa.me/5500000000000?text=Quero%20assinar%20o%20Plano%20Premium" target="_blank" class="btn btn-whatsapp-main cta-whatsapp">Assinar plano Premium <i class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>              
+                </div>
+                <p class="pricing-note"><i class="fas fa-circle-info"></i> Atendimento limitado por mês para manter a qualidade do acompanhamento individual.</p>
             </div>
         </section>
-        
-        </main>
+
+        <!-- ============ FAQ ============ -->
+        <section id="faq" class="faq section-padding">
+            <div class="container faq-container">
+                <p class="eyebrow center"><span class="eyebrow-dot"></span>ANTES DE COMEÇAR</p>
+                <h2 class="section-title">PERGUNTAS FREQUENTES</h2>
+
+                <div class="faq-list" id="faqList">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Como funciona a consultoria online?<i class="fas fa-plus faq-icon"></i></button>
+                        <div class="faq-answer"><p>Você passa por uma avaliação inicial em formato de formulário e fotos. Com base nisso, monto seu treino na plataforma e você o executa sabendo exatamente as cargas, repetições e como fazer o exercício através de vídeos.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Eu preciso treinar em academia obrigatoriamente?<i class="fas fa-plus faq-icon"></i></button>
+                        <div class="faq-answer"><p>Não! O treino pode ser adaptado tanto para academia quanto para casa, usando peso do corpo ou os equipamentos que você tiver.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Em quanto tempo vejo resultado?<i class="fas fa-plus faq-icon"></i></button>
+                        <div class="faq-answer"><p>Depende do seu ponto de partida e adesão, mas a maioria dos alunos sente diferença de energia e postura nas primeiras semanas, com mudanças visuais consistentes a partir do 2º/3º mês.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Como funciona o suporte via WhatsApp?<i class="fas fa-plus faq-icon"></i></button>
+                        <div class="faq-answer"><p>Você fala direto comigo para tirar dúvidas de execução, ajustar treino em semanas atípicas e reportar como está se sentindo.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Posso cancelar quando quiser?<i class="fas fa-plus faq-icon"></i></button>
+                        <div class="faq-answer"><p>Sim. A consultoria é mês a mês (ou por ciclo trimestral, se escolhida), sem fidelidade obrigatória.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA FINAL ============ -->
+        <section class="final-cta">
+            <div class="container final-cta-inner reveal">
+                <h2>PRONTO PRA TREINAR COM QUEM ACOMPANHA DE VERDADE?</h2>
+                <p>Fale comigo agora e monte seu plano de treino personalizado.</p>
+                <a href="https://wa.me/5500000000000" target="_blank" class="btn btn-whatsapp-main cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> QUERO TRANSFORMAR MEU CORPO
+                </a>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 [Seu Nome] PT. Todos os direitos reservados. | <a href="#privacy-policy">Política de Privacidade</a></p>
+        <div class="container footer-inner">
+            <a href="#hero" class="logo footer-logo"><span class="logo-mark">N</span> NETO<span class="logo-thin">PERSONAL</span></a>
+            <p>&copy; 2026 Neto Personal Trainer. Todos os direitos reservados. | <a href="#privacy-policy">Política de Privacidade</a></p>
             <div class="social-links">
-                <a href="https://instagram.com/neto_dmn" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com/neto_dmn" target="_blank" aria-label="Visite meu Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Visite meu canal do YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </footer>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5500000000000" target="_blank" class="floating-whatsapp cta-whatsapp" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
 
     <script src="scripts/home.js"></script>
 </body>
